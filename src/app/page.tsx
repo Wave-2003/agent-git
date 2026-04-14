@@ -3,64 +3,78 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className={styles.main}>
+      {/* Navigation */}
+      <nav className="container" style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-1px' }}>
+          AI<span className="gradient-text">SETUP</span>
+        </div>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Solutions</a>
+          <a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Process</a>
+          <a href="#" className="btn btn-outline">Sign In</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className={`${styles.hero} container animate-fade`}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            Unleash the Power of <br />
+            <span className="gradient-text">Autonomous AI</span>
+          </h1>
+          <p className={styles.heroSubtitle}>
+            Experience the next generation of AI infrastructure. Setup, deploy, and scale your intelligent agents in minutes with our autonomous configuration engine.
+          </p>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <a href="#" className="btn btn-primary">
+              Start Setup Now 
+              <span style={{ fontSize: '1.2rem' }}>→</span>
+            </a>
+            <a href="#" className="btn btn-outline">Explore Core</a>
+          </div>
+        </div>
+        <div className={styles.heroImageWrapper}>
+          <Image
+            src="/ai_hero.png"
+            alt="AI Core Hero"
+            width={600}
+            height={600}
+            className={styles.heroImage}
+            priority
+          />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className={`${styles.features} container`}>
+        <div className={`${styles.featureCard} glass animate-fade`}>
+          <span className={styles.featureIcon}>⚡</span>
+          <h3 className={styles.featureTitle}>Instant Deployment</h3>
+          <p className={styles.featureText}>
+            Zero-configuration setup protocols that get your AI models running at light speed.
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className={`${styles.featureCard} glass animate-fade`} style={{ animationDelay: '0.2s' }}>
+          <span className={styles.featureIcon}>🛡️</span>
+          <h3 className={styles.featureTitle}>Neural Security</h3>
+          <p className={styles.featureText}>
+            End-to-end encrypted data streams and multi-layered authentication for your peace of mind.
+          </p>
         </div>
-      </main>
+        <div className={`${styles.featureCard} glass animate-fade`} style={{ animationDelay: '0.4s' }}>
+          <span className={styles.featureIcon}>🌐</span>
+          <h3 className={styles.featureTitle}>Global Scale</h3>
+          <p className={styles.featureText}>
+            Distribute your AI workload across a global decentralized network with ease.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="container" style={{ padding: '4rem 2rem', borderTop: '1px solid var(--glass-border)', marginTop: 'auto', textAlign: 'center', color: 'rgba(255,255,255,0.4)' }}>
+        <p>&copy; 2026 AI SETUP Hub. Powered by Autonomous Engineering.</p>
+      </footer>
     </div>
   );
 }
