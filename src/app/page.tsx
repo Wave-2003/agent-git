@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
           <a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Solutions</a>
           <a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Process</a>
-          <a href="#" className="btn btn-outline">Sign In</a>
+          <Link href="/login" className="btn btn-outline" style={{ textDecoration: 'none' }}>Sign In</Link>
         </div>
       </nav>
 
