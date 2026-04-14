@@ -1,21 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.main}>
-      {/* Navigation */}
-      <nav className="container" style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-1px' }}>
-          AI<span className="gradient-text">SETUP</span>
-        </div>
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          <a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Solutions</a>
-          <a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Process</a>
-          <Link href="/login" className="btn btn-outline" style={{ textDecoration: 'none' }}>Sign In</Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className={`${styles.hero} container animate-fade`}>
